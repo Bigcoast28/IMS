@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Variables */
+:root {
+    --noir-clair: hsl(0, 2%, 18%);
+    --primary-color: #0f172a;
+    --primary-dark: lab(7.35% 0.47 0.16);
+    --primary-light: #1e293b;
+    --accent-color: #f59e0b;
+    --black: hsl(0, 6%, 3%);
+    --gold: #eabe4c;
+    --text-main: #f9fafb;
+    --support-color: #fef3c7;
+    --text-muted: #94a3b8;
+ 
+
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background: var(--black);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gold) !important;
+    transition: all var(--transition-fast);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: var(--text-main);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: goldenrod !important;
+    backdrop-filter: blur(10px);
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: all var(--transition-fast);
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.btn {
+    color: #eabe4c;
+}
+/* hero */
+.hero {
+    background-color: var(--black);
+    min-height: 100vh;
+    align-content: center;
+    color: var(--text-main);
+}
+
+.btn-accent {
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: #d9ae35d4;
+    color: white;
+}
+
+.text-accent {
+    color: var(--gold);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: var(--gold);
+    bottom: -10px;
+    left: 15%;
+}
+
+
+/* === Boutons === */
+.btn-accent,
+.btn-outline-light {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-accent::before,
+.btn-outline-light::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--gold), #fff);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btn-accent:hover::before,
+.btn-outline-light:hover::before {
+    left: 0;
+}
+
+.btn-accent:hover,
+.btn-outline-light:hover {
+    color: var(--primary-dark) !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(234, 190, 76, 0.4);
+}
+
+/* === Image Hero === */
+.image-hero img {
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    border-radius: 20px;
+    margin: 70px 0 70px 0;
+}
+
+.image-hero img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* === Section About === */
+.about {
+    background: linear-gradient(135deg, var(--primary-dark) 70%, #1e293b 100%);
+    color: var(--text-main);
+    padding: 80px 0;
+}
+
+/* Titre principal */
+.about h2 {
+    color: var(--gold), var(--support-color);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--support-color));
+}
+
+/* Sous-titre */
+.about h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--secondary-light);
+    margin-bottom: 1.2rem;
+}
+
+/* Paragraphe */
+.about p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+
+
+/* Image */
+.about img {
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.about img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.7);
+}
+
+/* Bouton */
+.about .btn1 {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    letter-spacing: 0.5px;
+}
+
+.about .btn1:hover {
+    background: var(--accent-color);
+    color: var(--primary-dark);
+    box-shadow: 0 8px 20px rgba(234, 190, 76, 0.4);
+    transform: translateY(-2px);
+}
+
+
+/* === Page Header Section === */
+.bg-primary-blue {
+    background: linear-gradient(135deg, var(--primary-dark) 60%, var(--accent-color) 180%);
+    color: var(--text-main);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Titre */
+.bg-primary-blue h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Ligne décorative */
+.bg-primary-blue::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--support-color));
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+/* Section Notre Histoire */
+section {
+  background-color: #f9fafc; /* fond très léger et moderne */
+}
+
+.about-img {
+  border-radius: 20px; /* coins arrondis élégants */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.d-flex h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.d-flex p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+
+/* === Section Features === */
+.section {
+    background-color: #f8f9fa; /* fond clair */
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold); /* couleur principale */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--support-color));
+    border-radius: 3px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+
+
+/* Feature Cards */
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--gold); /* couleur principale */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    color: var(--primary-dark);
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.feature-card h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* === Call to Action Section === */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-dark), var(--gold));
+    color: #fff;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient-primary h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+
+.bg-gradient-primary p {
+    font-size: 1.1rem;
+    color: #f9fafb;
+}
+/* Boutons dans la section CTA */
+.section .btn {
+    margin-bottom: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* === Filters Section === */
+section.bg-light {
+    background: #f9fafb; /* gris très clair */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn {
+    border: 2px solid var(--gold);
+    color: var(--primary-dark);
+    background: transparent;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-btn:hover {
+    background: var(--gold);
+    color: var(--primary-dark);
+    box-shadow: 0 6px 18px rgba(234, 190, 76, 0.4);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--gold);
+    color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(234, 190, 76, 0.3);
+}
+
+/* Trier par select */
+#sort-select {
+    border: 2px solid var(--gold);
+    border-radius: 25px;
+    font-weight: 500;
+    color: var(--primary-dark);
+    padding: 6px 15px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#sort-select:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 8px rgba(234, 190, 76, 0.5);
+    outline: none;
+}
+
+/* Label */
+.form-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* === Products Section === */
+.product-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(234, 190, 76, 0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gold);
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.product-image {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-name {
+    color: var(--primary-dark);
+}
+
+.product-features li {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.product-price {
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.btn-primary.add-to-cart {
+    background-color: var(--gold);
+    border: 2px solid var(--gold);
+    color: var(--primary-dark);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary.add-to-cart:hover {
+    background-color: var(--primary-dark);
+    color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(234, 190, 76, 0.4);
+}
+
+.btn-whatsapp.product-inquiry {
+    background-color: #25d366;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-whatsapp.product-inquiry:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 220, 130, 0.4);
+}
+
+/* Badges Disponible */
+.badge.bg-success {
+    background-color: #198754 !important;
+    font-weight: 600;
+}
+
+/* Responsive-produits */
+@media (max-width: 768px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* === Footer === */
+.footer {
+    background-color: var(--primary-dark); /* bleu nuit foncé */
+    color: #f9fafb;
+    padding: 60px 0 30px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer h5 {
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #f9fafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(234, 190, 76, 0.1);
+    color: var(--gold);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--gold);
+    transform: scale(1.3) rotate(8deg);
+    text-shadow: 0 6px 20px #eaac12df;
+}
+
+.footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer i {
+    color: var(--gold);
+}
+
+/* Responsive-produits */
+@media (max-width: 768px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive filters-section*/
+@media (max-width: 768px) {
+    .filter-btn {
+        flex: 1 1 calc(50% - 10px);
+        text-align: center;
+        justify-content: center;
+    }
+    
+    #sort-select {
+        width: 100% !important;
+    }
+}
+
+
+/* Responsive footer */
+@media (max-width: 992px) {
+    .footer .text-md-start,
+    .footer .text-md-end {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+
+    .footer .social-icons {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+
+/* Responsive : mobile */
+@media (max-width: 375px) {
+    .section .row.align-items-center {
+        flex-direction: column; /* empile texte + boutons */
+        text-align: center;
+    }
+
+    .section .col-lg-4.text-lg-end {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .section .btn {
+        display: inline-block;
+        width: 80%; /* boutons plus larges sur mobile */
+        max-width: 300px;
+        margin: 10px auto; /* centrer et espacer */
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .text-lg-end {
+        text-align: left !important;
+        margin-top: 20px;
+    }
+}
+.,
+
+/* pourquoi nous */
+@media (max-width: 992px) {
+    .feature-card {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* about */
+@media (max-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+  .d-flex {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* hero */
+@media (max-width: 999px) {
+    .img-fluid {
+        height: 100%;
+    }
+    
+    .navbar {
+        padding-bottom: 50px;
+    }
+}
