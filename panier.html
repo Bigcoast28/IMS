@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site web pour location de vehicules Cocody Abidjan en cote d'ivoire</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <meta name="description"
+        content="Découvrez IMS, votre site de location de véhicules à Cocody, Abidjan. Profitez d’un large choix de voitures fiables et abordables pour tous vos déplacements en Côte d’Ivoire. Réservez facilement en ligne !">
+    <meta name="keywords"
+        content="location de voitures, location de véhicules, Cocody, Abidjan, Côte d'Ivoire, IMS, voitures à louer, location auto, réservation voiture, location pas cher, véhicules fiables, location en ligne">
+    <link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+</head>
+<body>
+
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill me-2"></i>IMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produits.html">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="apropos.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="panier.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="cart-count badge bg-primary position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn ms-lg-3" href="produits.html">Commander</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <!-- Page Header -->
+    <section class="section bg-primary-blue text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold mb-3">Votre Panier</h1>
+                    <p class="lead mb-0 h6">Révisez vos sélections et finalisez votre commande</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Cart Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+                    <div class="card1 mb-4">
+                        <div class="card-header1">
+                            <h5 class="mb-0">
+                                <i class="bi bi-cart3 me-2"></i>Véhicules sélectionnés
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="cart-items">
+                                <!-- Les éléments du panier seront générés dynamiquement par JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="col-lg-4">
+                    <div class="cart-summary">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-receipt me-2"></i>Résumé de la commande
+                        </h5>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Sous-total:</span>
+                                <span class="cart-subtotal">0 FCFA</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Livraison:</span>
+                                <span class="text-success">Gratuite</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Assurance:</span>
+                                <span class="text-success">Incluse</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold fs-5">
+                                <span>Total:</span>
+                                <span class="cart-total">0 FCFA</span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-4">
+                            <button class="btn btn-whatsapp btn-lg order-whatsapp" disabled>
+                                <i class="bi bi-whatsapp me-2"></i>Commander par WhatsApp
+                            </button>
+                            <a href="produits.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>Continuer mes achats
+                            </a>
+                        </div>
+
+                        <!-- Customer Information Form -->
+                        <div class="card1">
+                            <div class="card-header1">
+                                <h6 class="mb-0">
+                                    <i class="bi bi-person me-2"></i>Informations de contact
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <form id="customer-form">
+                                    <div class="mb-3">
+                                        <label for="customer-name" class="form-label">Nom complet *</label>
+                                        <input type="text" class="form-control" id="customer-name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customer-phone" class="form-label">Téléphone *</label>
+                                        <input type="tel" class="form-control" id="customer-phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customer-email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="customer-email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="delivery-address" class="form-label">Adresse de livraison</label>
+                                        <textarea class="form-control" id="delivery-address" rows="2" placeholder="Adresse complète pour la livraison du véhicule"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="rental-dates" class="form-label">Période de location</label>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input type="date" class="form-control" id="start-date">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="date" class="form-control" id="end-date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Payment Info -->
+                        <div class="card1 mt-3">
+                            <div class="card-body1">
+                                <h6 class="fw-bold mb-3">
+                                    <i class="bi bi-info-circle me-2"></i>Informations importantes
+                                </h6>
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Assurance incluse
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Livraison gratuite
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Support 24/7
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Véhicules entretenus
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

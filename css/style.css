@@ -134,7 +134,6 @@
 .btn-outline-light:hover {
     color: var(--primary-dark) !important;
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(234, 190, 76, 0.4);
 }
 
 /* === Image Hero === */
@@ -762,7 +761,7 @@ section p.text-muted {
 }
 
 /* Icônes coordonnées */
-.feature-icon {
+.feature-icon1 {
     font-size: 1.5rem;
     color: var(--gold);
     background: rgba(234, 190, 76, 0.1);
@@ -853,6 +852,21 @@ section p.text-muted {
     justify-content: center;
     transition: all 0.3s ease;
 }
+
+.btn-sm {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(234, 190, 76, 0.1);
+    color: var(--gold);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+
 
 
 
