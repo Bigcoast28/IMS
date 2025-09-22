@@ -554,7 +554,6 @@ section.bg-light {
     background-color: var(--primary-dark);
     color: var(--gold);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(234, 190, 76, 0.4);
 }
 
 .btn-whatsapp.product-inquiry {
@@ -567,7 +566,6 @@ section.bg-light {
 .btn-whatsapp.product-inquiry:hover {
     background-color: #128c7e;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 220, 130, 0.4);
 }
 
 /* Badges Disponible */
@@ -576,11 +574,284 @@ section.bg-light {
     font-weight: 600;
 }
 
-/* Responsive-produits */
-@media (max-width: 768px) {
-    .product-card {
-        margin-bottom: 20px;
-    }
+/* === Mission Section === */
+.mission-section {
+    background-color: #f8f9fa; /* fond clair */
+    padding: 80px 0;
+}
+
+.mission-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.text-primary-blue {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold); /* couleur principale */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.text-primary-blue::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: var(--gold);
+    bottom: -10px;
+    left: 15%;
+}
+
+.mission-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+
+/* === Mission Cards === */
+.mission-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.mission-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--gold), var(--primary-blue));
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover .mission-icon {
+    transform: scale(1.2) rotate(-5deg);
+    color: var(--gold);
+}
+
+.mission-card h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.mission-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Section Équipe */
+section {
+    background-color: #f8f9fa; /* fond clair */
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold); /* couleur principale */
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-30%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--primary-dark));
+    border-radius: 3px;
+}
+
+section p.text-muted {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+/* Cartes Équipe */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Image équipe */
+.card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Texte des cartes */
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.card-body p.text-primary-orange {
+    font-weight: 500;
+    color: var(--gold); /* tu peux mettre var(--primary-orange) si tu veux garder l'orange */
+    margin-bottom: 12px;
+}
+
+.card-body p.text-muted {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Section Contact */
+.section {
+    background-color: #f8f9fa; /* fond doux */
+    padding: 80px 0;
+}
+
+/* Cartes */
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* En-tête des cartes */
+.card-header {
+    background: linear-gradient(90deg, var(--gold), var(--primary-dark));
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+/* Icônes coordonnées */
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--gold);
+    background: rgba(234, 190, 76, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Liens */
+.card-body a {
+    color: var(--primary-dark);
+    transition: color 0.3s ease;
+}
+
+.card-body a:hover {
+    color: var(--gold);
+}
+
+/* Formulaire */
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border: 2px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(234, 190, 76, 0.4);
+    outline: none;
+}
+
+/* Boutons */
+.btn-primary {
+    background: var(--gold);
+    border: none;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: var(--black);
+    color: #fff;
+}
+
+/* Bouton WhatsApp */
+.btn-whatsapp {
+    background: var(--gold);
+    border: none;
+    font-weight: 600;
+    border-radius: 12px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: var(--black);
+    color: #fff;
+}
+
+/* Réseaux sociaux */
+.btn-outline-primary {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+}
+.btn-outline-primary {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 
