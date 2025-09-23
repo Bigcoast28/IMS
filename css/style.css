@@ -866,7 +866,12 @@ section p.text-muted {
     transition: all 0.3s ease;
 }
 
-
+/* les images  */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: trqnsform var(--transition-slow);
+}
 
 
 
